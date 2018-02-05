@@ -10,7 +10,24 @@ public class PageController {
 	public ModelAndView index()
 	{
 		ModelAndView mv=new ModelAndView("page");
-		mv.addObject("greeting","welcome to ShopingApp");
+		mv .addObject("title","home");
+		mv.addObject("userClicksHome",true);
+		return mv;
+	}
+	@RequestMapping(value= "/about")
+	public ModelAndView about()
+	{
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("title","About us");
+		mv.addObject("userClicksAbout",true);
+		return mv;
+	}
+	@RequestMapping(value= "/contact")
+	public ModelAndView contact()
+	{
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("title","Contact us");
+		mv.addObject("userClicksContact",true);
 		return mv;
 	}
 
